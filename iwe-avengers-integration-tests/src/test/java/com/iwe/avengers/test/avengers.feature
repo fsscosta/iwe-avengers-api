@@ -17,7 +17,23 @@ And request {name: 'Captain America', secretIdentity: 'Steve Rogers'}
 When method post
 Then status 201
 
+Scenario: Match a new Avenger
+
+Given path 'avengers'
+And request {name: 'Captain America', secretIdentity: 'Steve Rogers'}
+When method post
+Then status 201
+And match response == {id: '#string', name: 'Iron Man', secretIdentity: 'Tony Stark'}
+
+Scenario: Delete a Avenger
+
+Given path 'avengers', 'sdsa-sasa-asas-sasa'
+When method delete
+Then status 204
+
+Scenario: Atualizar a Avenger
+
 Given path 'avengers', 'sdsa-sasa-asas-sasa'
 And request {name: 'Captain America', secretIdentity: 'Steve Rogers'}
-When method update
-Then status 201
+When method put
+Then status 204
