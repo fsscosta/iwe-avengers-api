@@ -16,3 +16,8 @@ Given path 'avengers'
 And request {name: 'Captain America', secretIdentity: 'Steve Rogers'}
 When method post
 Then status 201
+
+Given path 'avengers', 'sdsa-sasa-asas-sasa'
+And request {name: 'Captain America', secretIdentity: 'Steve Rogers'}
+When method update
+Then status 201
