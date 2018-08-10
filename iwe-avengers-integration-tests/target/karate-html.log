@@ -1,27 +1,25 @@
-22:28:40.860 karate.env system property was: null 
-22:28:41.255 request:
+22:39:14.241 karate.env system property was: null 
+22:39:14.631 request:
 1 > GET https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:28:42.485 response time in milliseconds: 1229
+22:39:16.083 response time in milliseconds: 1452
 1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 80
+1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Wed, 08 Aug 2018 01:28:42 GMT
-1 < x-amz-apigw-id: LSATnEG_CYcFXNQ=
-1 < x-amzn-RequestId: 6289b582-9aaa-11e8-bbf2-ff7bd74d78b9
-{
-"id": "asasa-asasa-sad",
-"name": "Iron Man", 
-"secretIdentity": "Tony Stark"
-}
+1 < Date: Fri, 10 Aug 2018 01:39:16 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b6cecc3-fb632f5ea2c219f0709382a8;Sampled=0
+1 < x-amz-apigw-id: LYnulFGeCYcFWXQ=
+1 < x-amzn-RequestId: 30ea5908-9c3e-11e8-a79e-c15c21085e6d
 
-22:28:42.531 karate.env system property was: null 
-22:28:42.537 request:
+
+22:39:16.115 assertion failed: path: $, actual: '', expected: '{"id":"#string","name":"Iron Man","secretIdentity":"Tony Stark"}', reason: not equal
+22:39:16.131 karate.env system property was: null 
+22:39:16.131 request:
 1 > POST https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -31,104 +29,118 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:28:43.080 response time in milliseconds: 543
+22:39:16.661 response time in milliseconds: 530
 1 < 201
+1 < Connection: keep-alive
+1 < Content-Length: 69
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:39:16 GMT
+1 < x-amz-apigw-id: LYnuuHbDCYcFhzw=
+1 < x-amzn-RequestId: 3173adbb-9c3e-11e8-ae3b-373659c8f0d0
+{"id": "#string", "name": "Iron Man", "secretIdentity": "Tony Stark"}
+
+22:39:16.677 karate.env system property was: null 
+22:39:16.677 request:
+1 > POST https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 58
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"name":"Captain America","secretIdentity":"Steve Rogers"}
+
+22:39:17.191 response time in milliseconds: 514
+1 < 201
+1 < Connection: keep-alive
+1 < Content-Length: 69
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:39:17 GMT
+1 < x-amz-apigw-id: LYnuzHwRCYcFogQ=
+1 < x-amzn-RequestId: 31c5ebf5-9c3e-11e8-bfbb-47ec6890f46b
+{"id": "#string", "name": "Iron Man", "secretIdentity": "Tony Stark"}
+
+22:39:17.192 karate.env system property was: null 
+22:39:17.192 request:
+1 > DELETE https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+22:39:17.738 response time in milliseconds: 546
+1 < 204
 1 < Connection: keep-alive
 1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Wed, 08 Aug 2018 01:28:42 GMT
-1 < x-amz-apigw-id: LSATtEUzCYcFVBQ=
-1 < x-amzn-RequestId: 62e717f7-9aaa-11e8-a5ea-332c37051ec1
+1 < Date: Fri, 10 Aug 2018 01:39:17 GMT
+1 < x-amz-apigw-id: LYnu5HvwCYcFsUw=
+1 < x-amzn-RequestId: 3217dd0e-9c3e-11e8-9750-d7711b2dc9e8
+
+22:39:17.738 karate.env system property was: null 
+22:39:17.738 request:
+1 > PUT https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 58
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"name":"Captain America","secretIdentity":"Steve Rogers"}
+
+22:39:18.300 response time in milliseconds: 562
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Length: 0
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:39:18 GMT
+1 < x-amz-apigw-id: LYnu-Gy1iYcF3pw=
+1 < x-amzn-RequestId: 326c1762-9c3e-11e8-86d9-517f9840ba06
 
 
-< x-amzn-RequestId: 9e508e82-9aa9-11e8-91c6-c98f4c40666f
-{"message":"Missing Authentication Token"}
+22:39:18.300 karate.env system property was: null 
+22:39:18.300 request:
+1 > POST https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 33
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Steve Rogers"}
 
-22:23:13.256 status code was: 403, expected: 201, response time: 565, url: https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers, response: {"message":"Missing Authentication Token"}
--1: FAHJ3V83CPW7PZABVA7Q
-<!DOCTYPE html>
-<html class="no-js lang-en lang-en_US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" data-aws-assets="//a0.awsstatic.com" data-js-version="1.0.401" data-css-version="1.0.372">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="dns-prefetch" href=//a0.awsstatic.com />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 Not Found</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <link rel="icon" type="image/ico" href="//a0.awsstatic.com/main/images/site/fav/favicon.ico" />
-  <link rel="shortcut icon" type="image/ico" href="//a0.awsstatic.com/main/images/site/fav/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="57x57" href="//a0.awsstatic.com/main/images/site/touch-icon-iphone-114-smile.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="//a0.awsstatic.com/main/images/site/touch-icon-ipad-144-smile.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="//a0.awsstatic.com/main/images/site/touch-icon-iphone-114-smile.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="//a0.awsstatic.com/main/images/site/touch-icon-ipad-144-smile.png" />
-  <meta name="google-site-verification" content="XHghG81ulgiW-3EylGcF48sG28tBW5EH0bNUhgo_DrU" />
-  <meta name="msvalidate.01" content="6F92E52A288E266E30C2797ECB5FCCF3" />
-    <link rel="stylesheet" href="//a0.awsstatic.com/main/css/1.0.372/style.css" />
-  <style>
-    .error {
-      text-align: center;
-    }
-    h1.error-code {
-      font-size: 15em;
-      color: #686868;
-    }
-    [data-dropdown="aws-nav-dropdown-lang"] {
-      display: none;
-    }
-  </style>
-  <script>
-    var AWS = {
-      PageSettings: {
-        supportedLanguages: ['en'],
-        defaultLanguage: 'en',
-        logDataSet: 'LIVE:PROD',
-        logInstance: 'PUB',
-        libraCSSPath: '//a0.awsstatic.com/libra-css/css/1.0.167'
-      }
-    };
+22:39:18.831 response time in milliseconds: 531
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:39:18 GMT
+1 < x-amz-apigw-id: LYnvEGkwiYcF-qg=
+1 < x-amzn-RequestId: 32be07a3-9c3e-11e8-9b83-510e9abb8a32
+{"message": "Invalid request body"}
 
-    var require = {
-      baseUrl: "//a0.awsstatic.com/chrome/js/1.0.401/",
-      paths: {
-        "jquery": "jquery-amd"
-      },
-      deps: ["scripts"],
-      shim: {
-        "scripts": ["jquery"],
-        "forms": ["jquery"],
-        "pricing-table": ["jquery", "scripts"],
-        "plugins/bootstrap.button": ["jquery"],
-        "plugins/bootstrap.collapse": ["jquery"],
-        "plugins/bootstrap.dropdown": ["jquery"],
-        "plugins/bootstrap.popover": ["jquery"],
-        "plugins/bootstrap.tab": ["jquery"],
-        "plugins/bootstrap.tooltip": ["jquery"],
-        "plugins/free-tier": ["jquery", "scripts"],
-        "plugins/jquery.caroufredsel": ["jquery"],
-        "plugins/jquery.fancybox": ["jquery"],
-        "plugins/jwplayer.html5": ["jquery"],
-        "plugins/jwplayer": ["jquery"],
-        "plugins/pbSize": ["jquery"],
-        "plugins/pushstate": ["jquery", "scripts"],
-        "plugins/search-controller": ["jquery"],
-        "plugins/jquery.touchSwipe": ["jquery"]
-      },
-      waitSeconds: 15
-    };
-  </script>
-  <script src="//a0.awsstatic.com/chrome/js/1.0.401/head.2.0.js"></script>
-  <script src="//a0.awsstatic.com/s_code/js/1.0/awshome_s_code.js"></script>
-  <script src="//a0.awsstatic.com/target/1.0.96/aws-target-mediator.js"></script>
-</head>
-<body>
+22:39:18.831 karate.env system property was: null 
+22:39:18.831 request:
+1 > PUT https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 33
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Steve Rogers"}
 
-  <header id="aws-page-header" class="aws" role="banner"> 
- <div id="aws-nav" class="aws-nav" role="navigation"> 
-  <div class="aws-nav-header"> 
-   <div class="aws-nav-header-left"> 
-    <div id="aws-nav-flyout-trigger" class="aws-nav-flyout-trigger" data-flyout="aws-nav-flyout-1-root" tabindex="1"> 
-     <i class="aws-nav-icon-reorder"></i>Menu 
-    </div> 
-    <div class="aws-bg-logo lb-bg-logo aws-amazon_web_services_smile-header-desktop-en"> 
+22:39:19.362 response time in milliseconds: 531
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Fri, 10 Aug 2018 01:39:19 GMT
+1 < x-amz-apigw-id: LYnvJHmACYcFq2A=
+1 < x-amzn-RequestId: 3310bb6a-9c3e-11e8-a29a-b3317b003048
+{"message": "Invalid request body"}
+
+iv class="aws-bg-logo lb-bg-logo aws-amazon_web_services_smile-header-desktop-en"> 
      <a href="https://aws.amazon.com/?nc2=h_lg"><span>Click here to return to Amazon Web Services homepage</span></a> 
     </div> 
     <div id="aws-nav-quicklinks" class="aws-nav-quicklinks"> 

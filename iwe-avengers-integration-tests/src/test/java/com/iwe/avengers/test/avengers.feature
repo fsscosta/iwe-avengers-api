@@ -31,9 +31,23 @@ Given path 'avengers', 'sdsa-sasa-asas-sasa'
 When method delete
 Then status 204
 
-Scenario: Atualizar a Avenger
+Scenario: Update Avenger by Id
 
 Given path 'avengers', 'sdsa-sasa-asas-sasa'
 And request {name: 'Captain America', secretIdentity: 'Steve Rogers'}
 When method put
-Then status 204
+Then status 200
+
+Scenario: Must return 400 foi invalid Registration Payload
+
+Given path 'avengers'
+And request {secretIdentity: 'Steve Rogers'}
+When method post
+Then status 400
+
+Scenario: Update Avenger with invalid Payload
+
+Given path 'avengers', 'sdsa-sasa-asas-sasa'
+And request {secretIdentity: 'Steve Rogers'}
+When method put
+Then status 400
