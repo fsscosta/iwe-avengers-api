@@ -19,4 +19,23 @@ public class AvengerDAO {
 	public Avenger find(String id) {
 		return mapper.get(id);
 	}
+
+	public Avenger create(Avenger newAvenger) {
+		
+		String id = mapper.size() + "";
+		
+		newAvenger.setId(id);
+		
+		mapper.put(id, newAvenger);
+		
+		return newAvenger;
+	}
+
+	public void remove(String id) {
+		mapper.remove(id);
+	}
+
+	public void update(String id, Avenger avenger) {
+		mapper.replace(id, avenger);
+	}
 }
