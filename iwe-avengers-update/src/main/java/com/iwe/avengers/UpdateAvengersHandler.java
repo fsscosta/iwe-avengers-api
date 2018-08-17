@@ -36,7 +36,7 @@ public class UpdateAvengersHandler implements RequestHandler<Avenger, HandlerRes
 										.setObjectBody(retrivedAvenger)
 										.build();
 		
-		context.getLogger().log("[#] - Avenger removed! =)");
+		context.getLogger().log("[#] - Avenger updated! =)");
 		
 		return response;
 	}
