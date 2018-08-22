@@ -1,46 +1,47 @@
-22:38:02.046 karate.env system property was: null 
-22:38:02.438 request:
-1 > GET https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/invalid
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
-
-22:38:11.066 response time in milliseconds: 8627
-1 < 404
-1 < Connection: keep-alive
-1 < Content-Length: 319
-1 < Content-Type: application/json
-1 < Date: Tue, 21 Aug 2018 01:38:11 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7b6cfb-fd502382189dbc36b54b4458;Sampled=0
-1 < x-amz-apigw-id: L833XFp6iYcFRaw=
-1 < x-amzn-RequestId: d8afbcb3-a4e2-11e8-a478-f917ec19e78e
-{"errorMessage":"[NotFound] - Avenger id: invalid not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:33)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
-
-22:38:11.100 karate.env system property was: null 
-22:38:11.104 request:
+21:01:54.897 karate.env system property was: null 
+21:01:56.908 request:
 1 > GET https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/anyid
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:38:11.638 response time in milliseconds: 533
+21:01:57.813 response time in milliseconds: 904
+1 < 401
+1 < Connection: keep-alive
+1 < Content-Length: 26
+1 < Content-Type: application/json
+1 < Date: Wed, 22 Aug 2018 00:01:57 GMT
+1 < x-amz-apigw-id: L_8uZEU4CYcFWgw=
+1 < x-amzn-ErrorType: UnauthorizedException
+1 < x-amzn-RequestId: 96293a41-a59e-11e8-8416-bfe9d6ae5921
+{"message":"Unauthorized"}
+
+21:01:57.847 karate.env system property was: null 
+21:01:59.063 request:
+1 > GET https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/invalid
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6Ijk2Y2UyY2E0LWE1OWUtMTFlOC04MTkxLTM5OTA0MTkzZGM5ZCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTE4LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzE4LCJpYXQiOjE1MzQ4OTYxMTgsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.eUMht4wJNKXOE8g_VWAU8krbsEoqpT4gvKQIdJM9lVavgqo7akrbhmJCUGs3gPuUZcNp6iKfCARdoK-W1rpq-I1Rv7XMp1ZeOOyKkxdgM8mkKujDWPlffkM9BO5sY8cJs5lVKIiAjsforPRaT8vaVFp1JpZPXF7d9Kw1EotSVNaMr7x-TH7GpmIJE6PSzsSSDPN87OmV4zZqYgPeKkyxs2lQEvjdKnISSJK6tJgrJ3XSR_7u1z0DSkXTdBy5ZjJAlftM2u5o1qc5jSsND0tJPrgRY0Bkn19tunWhLoK8zZp5ZtQV2ZD0KttGB28BCA7MBPJT0jAQOSWSejXpQcNuWg
+1 > Connection: Keep-Alive
+1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+21:01:59.858 response time in milliseconds: 795
 1 < 404
 1 < Connection: keep-alive
-1 < Content-Length: 317
+1 < Content-Length: 319
 1 < Content-Type: application/json
-1 < Date: Tue, 21 Aug 2018 01:38:11 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7b6d03-5837f59934d11b032ec514e0;Sampled=0
-1 < x-amz-apigw-id: L834kHo5CYcFttw=
-1 < x-amzn-RequestId: dd43011b-a4e2-11e8-93ef-b3f738364644
-{"errorMessage":"[NotFound] - Avenger id: anyid not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:33)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
+1 < Date: Wed, 22 Aug 2018 00:01:59 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b7ca7f7-163c6ab612243221a4a652a8;Sampled=0
+1 < x-amz-apigw-id: L_8urE5qCYcF7Pw=
+1 < x-amzn-RequestId: 973eef6d-a59e-11e8-84de-75526fed1efd
+{"errorMessage":"[NotFound] - Avenger id: invalid not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:33)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
 
-22:38:11.639 status code was: 404, expected: 401, response time: 533, url: https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/anyid, response: {"errorMessage":"[NotFound] - Avenger id: anyid not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:33)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
-22:38:11.650 karate.env system property was: null 
-22:38:11.662 request:
+21:01:59.868 karate.env system property was: null 
+21:02:00.992 request:
 1 > POST https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6Ijk3ZjQ1Yzk2LWE1OWUtMTFlOC1iMjY3LWNmZDJmNTE0ODRiZiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTIwLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzIwLCJpYXQiOjE1MzQ4OTYxMjAsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.Y3gVa12Bim7D-ecFtrMMPmyL2KP7eBxWzqB_TtA1kVAqXpRbsQXFSnfmFXIaYkIQRP3r-CXZYz_s75HVjcUk0sc8-K6PDVz1pFXom8vML69WMjc6PJiJw9zSazbPKiaz2fXD7ggJIa0St_aZO0efF7ZnBnzpQLQ8Y-_i6qra76IPhbQHkWqn6dOlYtm4pSv3zfuOHA7gldvh2mA-XqTV_YU2qK8Xe2y2X6Br5fB-wPA1iT37eBdr6uAWL8FeBi8ORfJ-3UQ4OlvHV68agcuJYjZiOWiLe0BgeuC5RQvGHx9EGbIGDHY7JGU2YKiatqfgl6lu6-kSw8uK0mwns_a3qg
 1 > Connection: Keep-Alive
 1 > Content-Length: 58
 1 > Content-Type: application/json; charset=UTF-8
@@ -48,39 +49,41 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:38:19.033 response time in milliseconds: 7370
+21:02:01.685 response time in milliseconds: 693
 1 < 201
 1 < Connection: keep-alive
 1 < Content-Length: 102
 1 < Content-Type: application/json
-1 < Date: Tue, 21 Aug 2018 01:38:19 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7b6d04-50940954be80ae588bea86c2;Sampled=0
-1 < x-amz-apigw-id: L834qFZAiYcFVsQ=
-1 < x-amzn-RequestId: dd973bbf-a4e2-11e8-af16-09444a448841
-{"id":"40299e8c-dbd6-4674-86ae-ffde5350aa29","name":"Captain America","secretIdentity":"Steve Rogers"}
+1 < Date: Wed, 22 Aug 2018 00:02:01 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b7ca7f9-77b24448dd89d820bd09ee5e;Sampled=0
+1 < x-amz-apigw-id: L_8u-HxZCYcFvQw=
+1 < x-amzn-RequestId: 9859604d-a59e-11e8-a471-c9e7fd1e42ed
+{"id":"814ee966-001f-4a54-ad48-1fc14cfcc077","name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:38:19.044 request:
-2 > GET https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/40299e8c-dbd6-4674-86ae-ffde5350aa29
+21:02:01.697 request:
+2 > GET https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/814ee966-001f-4a54-ad48-1fc14cfcc077
 2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6Ijk3ZjQ1Yzk2LWE1OWUtMTFlOC1iMjY3LWNmZDJmNTE0ODRiZiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTIwLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzIwLCJpYXQiOjE1MzQ4OTYxMjAsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.Y3gVa12Bim7D-ecFtrMMPmyL2KP7eBxWzqB_TtA1kVAqXpRbsQXFSnfmFXIaYkIQRP3r-CXZYz_s75HVjcUk0sc8-K6PDVz1pFXom8vML69WMjc6PJiJw9zSazbPKiaz2fXD7ggJIa0St_aZO0efF7ZnBnzpQLQ8Y-_i6qra76IPhbQHkWqn6dOlYtm4pSv3zfuOHA7gldvh2mA-XqTV_YU2qK8Xe2y2X6Br5fB-wPA1iT37eBdr6uAWL8FeBi8ORfJ-3UQ4OlvHV68agcuJYjZiOWiLe0BgeuC5RQvGHx9EGbIGDHY7JGU2YKiatqfgl6lu6-kSw8uK0mwns_a3qg
 2 > Connection: Keep-Alive
 2 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
 2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:38:19.616 response time in milliseconds: 572
+21:02:02.266 response time in milliseconds: 569
 2 < 200
 2 < Connection: keep-alive
 2 < Content-Length: 102
 2 < Content-Type: application/json
-2 < Date: Tue, 21 Aug 2018 01:38:19 GMT
-2 < X-Amzn-Trace-Id: Root=1-5b7b6d0b-d54107d89db997b6a848eed8;Sampled=0
-2 < x-amz-apigw-id: L835zGuACYcFWgw=
-2 < x-amzn-RequestId: e1fe17b4-a4e2-11e8-8416-bfe9d6ae5921
-{"id":"40299e8c-dbd6-4674-86ae-ffde5350aa29","name":"Captain America","secretIdentity":"Steve Rogers"}
+2 < Date: Wed, 22 Aug 2018 00:02:02 GMT
+2 < X-Amzn-Trace-Id: Root=1-5b7ca7fa-5c7f4c596d226d7cad57bb08;Sampled=0
+2 < x-amz-apigw-id: L_8vFFHoCYcFpkA=
+2 < x-amzn-RequestId: 98cabf6e-a59e-11e8-8af4-cb91db68c4e5
+{"id":"814ee966-001f-4a54-ad48-1fc14cfcc077","name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:38:19.625 karate.env system property was: null 
-22:38:19.627 request:
+21:02:02.276 karate.env system property was: null 
+21:02:03.398 request:
 1 > POST https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6Ijk5NjQ2N2NjLWE1OWUtMTFlOC04OTc3LWM1NDFmMDViNzYwZiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTIzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzIzLCJpYXQiOjE1MzQ4OTYxMjMsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.PLK1WMK8MsdxNy_oVGiuBaBI9kdizPt6bquTEULcUaO2ZC-4tnlgmBJJLMA3q8XnKsi8nzsyMaIPDifDaUIO208tTGWkj3sY6GiKy20knmXFmXXx4_nH4mTWPdh8sZuqZISzGuunzcY2JFFEKLmDLn8y8H5lvYnRCfzXpWui_ZwccuvoSUxuxH7Grfw-Vfn3fif4yHIC-VoosrRUedEz3CJWN4rBqAB6yMdQejrv5DB03ScDiyQvGHmFDcmKf6w3XFsHwtpNZUKjmFY3FQEYj2JByAMrvPAVppkzuQMS-0U2PtoUJ5R4CvQICUsv5Sb0Hx9kTGfGIYruzIutvn4LYQ
 1 > Connection: Keep-Alive
 1 > Content-Length: 47
 1 > Content-Type: application/json; charset=UTF-8
@@ -88,75 +91,79 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Hulk","secretIdentity":"Bruce Banner"}
 
-22:38:20.215 response time in milliseconds: 587
+21:02:03.991 response time in milliseconds: 593
 1 < 201
 1 < Connection: keep-alive
 1 < Content-Length: 91
 1 < Content-Type: application/json
-1 < Date: Tue, 21 Aug 2018 01:38:20 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7b6d0c-95847e242bc046e0fe310d84;Sampled=0
-1 < x-amz-apigw-id: L8355GeKiYcFRaQ=
-1 < x-amzn-RequestId: e2592fdf-a4e2-11e8-b94e-6517632be0ac
-{"id":"268cdeff-f1fa-4198-8323-9816c9c34799","name":"Hulk","secretIdentity":"Bruce Banner"}
+1 < Date: Wed, 22 Aug 2018 00:02:03 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b7ca7fb-3d56c7e82a70c4b857451cf9;Sampled=0
+1 < x-amz-apigw-id: L_8vWEJ8iYcFRaw=
+1 < x-amzn-RequestId: 99c96ade-a59e-11e8-a478-f917ec19e78e
+{"id":"e3715cf3-9121-46a5-8839-14918d09d9ed","name":"Hulk","secretIdentity":"Bruce Banner"}
 
-22:38:20.221 request:
-2 > DELETE https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/268cdeff-f1fa-4198-8323-9816c9c34799
+21:02:03.997 request:
+2 > DELETE https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/e3715cf3-9121-46a5-8839-14918d09d9ed
 2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6Ijk5NjQ2N2NjLWE1OWUtMTFlOC04OTc3LWM1NDFmMDViNzYwZiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTIzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzIzLCJpYXQiOjE1MzQ4OTYxMjMsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.PLK1WMK8MsdxNy_oVGiuBaBI9kdizPt6bquTEULcUaO2ZC-4tnlgmBJJLMA3q8XnKsi8nzsyMaIPDifDaUIO208tTGWkj3sY6GiKy20knmXFmXXx4_nH4mTWPdh8sZuqZISzGuunzcY2JFFEKLmDLn8y8H5lvYnRCfzXpWui_ZwccuvoSUxuxH7Grfw-Vfn3fif4yHIC-VoosrRUedEz3CJWN4rBqAB6yMdQejrv5DB03ScDiyQvGHmFDcmKf6w3XFsHwtpNZUKjmFY3FQEYj2JByAMrvPAVppkzuQMS-0U2PtoUJ5R4CvQICUsv5Sb0Hx9kTGfGIYruzIutvn4LYQ
 2 > Connection: Keep-Alive
 2 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
 2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:38:27.612 response time in milliseconds: 7391
+21:02:04.789 response time in milliseconds: 792
 2 < 204
 2 < Connection: keep-alive
 2 < Content-Length: 0
 2 < Content-Type: application/json
-2 < Date: Tue, 21 Aug 2018 01:38:27 GMT
-2 < X-Amzn-Trace-Id: Root=1-5b7b6d0c-1579104f76992c1c064f6815;Sampled=0
-2 < x-amz-apigw-id: L835_GsWiYcF5dg=
-2 < x-amzn-RequestId: e2b1146f-a4e2-11e8-a2ae-53b9e1675e28
+2 < Date: Wed, 22 Aug 2018 00:02:04 GMT
+2 < X-Amzn-Trace-Id: Root=1-5b7ca7fc-b38f620452cb08816ee7cfce;Sampled=0
+2 < x-amz-apigw-id: L_8vcEa3CYcF_CQ=
+2 < x-amzn-RequestId: 9a267ebf-a59e-11e8-acd0-45d44e3a73c2
 
-22:38:27.615 request:
-3 > GET https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/268cdeff-f1fa-4198-8323-9816c9c34799
+21:02:04.792 request:
+3 > GET https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/e3715cf3-9121-46a5-8839-14918d09d9ed
 3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6Ijk5NjQ2N2NjLWE1OWUtMTFlOC04OTc3LWM1NDFmMDViNzYwZiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTIzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzIzLCJpYXQiOjE1MzQ4OTYxMjMsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.PLK1WMK8MsdxNy_oVGiuBaBI9kdizPt6bquTEULcUaO2ZC-4tnlgmBJJLMA3q8XnKsi8nzsyMaIPDifDaUIO208tTGWkj3sY6GiKy20knmXFmXXx4_nH4mTWPdh8sZuqZISzGuunzcY2JFFEKLmDLn8y8H5lvYnRCfzXpWui_ZwccuvoSUxuxH7Grfw-Vfn3fif4yHIC-VoosrRUedEz3CJWN4rBqAB6yMdQejrv5DB03ScDiyQvGHmFDcmKf6w3XFsHwtpNZUKjmFY3FQEYj2JByAMrvPAVppkzuQMS-0U2PtoUJ5R4CvQICUsv5Sb0Hx9kTGfGIYruzIutvn4LYQ
 3 > Connection: Keep-Alive
 3 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
 3 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:38:28.193 response time in milliseconds: 578
+21:02:05.442 response time in milliseconds: 650
 3 < 404
 3 < Connection: keep-alive
 3 < Content-Length: 348
 3 < Content-Type: application/json
-3 < Date: Tue, 21 Aug 2018 01:38:28 GMT
-3 < X-Amzn-Trace-Id: Root=1-5b7b6d14-255b651a7d75f6a231f3a972;Sampled=0
-3 < x-amz-apigw-id: L837JGFjiYcFVBQ=
-3 < x-amzn-RequestId: e71976d5-a4e2-11e8-a532-452b2055d9ef
-{"errorMessage":"[NotFound] - Avenger id: 268cdeff-f1fa-4198-8323-9816c9c34799 not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:33)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
+3 < Date: Wed, 22 Aug 2018 00:02:05 GMT
+3 < X-Amzn-Trace-Id: Root=1-5b7ca7fd-1746ebc04c38548068f327b0;Sampled=0
+3 < x-amz-apigw-id: L_8vkEc-iYcFqPA=
+3 < x-amzn-RequestId: 9aa60f4b-a59e-11e8-8c25-17828c0a51f6
+{"errorMessage":"[NotFound] - Avenger id: e3715cf3-9121-46a5-8839-14918d09d9ed not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:33)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
 
-22:38:28.207 karate.env system property was: null 
-22:38:28.210 request:
+21:02:05.454 karate.env system property was: null 
+21:02:06.528 request:
 1 > DELETE https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/sss-ddd-fff-eee
 1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjliNDVmOTFkLWE1OWUtMTFlOC04MjM0LTFmMWRhZTdiZGQ3YSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTI2LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzI2LCJpYXQiOjE1MzQ4OTYxMjYsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.WubedKQvQXQ4TaxTaF9uEdBMesna-4BW7-Fzwn0rKxknPWQWhRyDdsu3w9K5ErdXHhMl2FvqyfOCQNNdEv392YqibQ9LU08TG1daMO2s-M_p7btHBFjoyff130RMx5sHTTc7fuHJEZKkT5X3IPWWhwbU_jLq0XeDYrS-jGG-IMghNyE3L36PgBTBjGTSOuNH9mXJcbzvLNTRNNNH4DmVmMn4zuePkLc_dtPo_-iRxQdCcdjZQMdOSFlWfYPB5bnzFleq1jIin5AFzCOk6XMmR5IMszZ8dGCCyO-ggda8kDSEHQfvTCbtTDZ1b9HRMmcdneTrqDFlgUVVwBonm97ObQ
 1 > Connection: Keep-Alive
 1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:38:29.053 response time in milliseconds: 841
+21:02:07.107 response time in milliseconds: 578
 1 < 404
 1 < Connection: keep-alive
 1 < Content-Length: 323
 1 < Content-Type: application/json
-1 < Date: Tue, 21 Aug 2018 01:38:29 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7b6d14-fd09b3b4f5f8e7c47d9bf858;Sampled=0
-1 < x-amz-apigw-id: L837PHQuiYcFd1g=
-1 < x-amzn-RequestId: e773f365-a4e2-11e8-a3d9-07faa7aedea6
+1 < Date: Wed, 22 Aug 2018 00:02:07 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b7ca7fe-d5c921883885a250216ce820;Sampled=0
+1 < x-amz-apigw-id: L_8v1EcfiYcFX1g=
+1 < x-amzn-RequestId: 9baa86b6-a59e-11e8-9161-ef997d13aa3c
 {"errorMessage":"[NotFound] - Avenger id: sss-ddd-fff-eee not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.RemoveAvengerHandler.handleRequest(RemoveAvengerHandler.java:27)","com.iwe.avengers.RemoveAvengerHandler.handleRequest(RemoveAvengerHandler.java:1)"]}
 
-22:38:29.061 karate.env system property was: null 
-22:38:29.063 request:
+21:02:07.119 karate.env system property was: null 
+21:02:08.226 request:
 1 > POST https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjljNDVkZDA1LWE1OWUtMTFlOC1iYzBkLTU1MTc4NTA2M2YwOCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTI4LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzI4LCJpYXQiOjE1MzQ4OTYxMjgsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.IYxe4vBC7vOaxGw3NMpUdEjZliEORC_a9gmtWgWnJWGiRVN03kJSfOssRFM472Ti3XnrAqY2Qm_qpdCb0oB6TCWsym0JZ22tXLlZ70EGE8d6xS4YDpZIY91WUr3Iu_u5R1NsaUgyyrRGqPvLaIqDoKG4Qgxge0eqo9zXmYfLZM9BNBiKOnuL7erasJyJowWdGdF6QJY78qEnTugpqIcuL6UK1A0ffVxnNc808yk-J-VWS5iPSnhPuD_gNN30BWnb6t0yTR4GB1rlBl1pqyOe4c9l5NxBV8VQ4yD3Rjf1_axWtCJU12eeUsNfvMUK3iB7VUTfYERjCtTRzXe4hRr54w
 1 > Connection: Keep-Alive
 1 > Content-Length: 43
 1 > Content-Type: application/json; charset=UTF-8
@@ -164,20 +171,21 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain","secretIdentity":"Steve"}
 
-22:38:29.672 response time in milliseconds: 608
+21:02:08.769 response time in milliseconds: 543
 1 < 201
 1 < Connection: keep-alive
 1 < Content-Length: 87
 1 < Content-Type: application/json
-1 < Date: Tue, 21 Aug 2018 01:38:29 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7b6d15-103311e8852a70988e383c50;Sampled=0
-1 < x-amz-apigw-id: L837YEW_CYcFqag=
-1 < x-amzn-RequestId: e7f7f0ee-a4e2-11e8-a6dd-6fbdf0299266
-{"id":"0999b0aa-9a97-40c6-80a2-461addf0bd84","name":"Captain","secretIdentity":"Steve"}
+1 < Date: Wed, 22 Aug 2018 00:02:08 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b7ca800-594d61e9fc562142816f2b89;Sampled=0
+1 < x-amz-apigw-id: L_8wGEdGCYcFX1g=
+1 < x-amzn-RequestId: 9caa6b1c-a59e-11e8-9161-ef997d13aa3c
+{"id":"a0817afd-5919-456b-bd3b-20b862dce170","name":"Captain","secretIdentity":"Steve"}
 
-22:38:29.677 request:
-2 > PUT https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/0999b0aa-9a97-40c6-80a2-461addf0bd84
+21:02:08.775 request:
+2 > PUT https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/a0817afd-5919-456b-bd3b-20b862dce170
 2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjljNDVkZDA1LWE1OWUtMTFlOC1iYzBkLTU1MTc4NTA2M2YwOCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTI4LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzI4LCJpYXQiOjE1MzQ4OTYxMjgsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.IYxe4vBC7vOaxGw3NMpUdEjZliEORC_a9gmtWgWnJWGiRVN03kJSfOssRFM472Ti3XnrAqY2Qm_qpdCb0oB6TCWsym0JZ22tXLlZ70EGE8d6xS4YDpZIY91WUr3Iu_u5R1NsaUgyyrRGqPvLaIqDoKG4Qgxge0eqo9zXmYfLZM9BNBiKOnuL7erasJyJowWdGdF6QJY78qEnTugpqIcuL6UK1A0ffVxnNc808yk-J-VWS5iPSnhPuD_gNN30BWnb6t0yTR4GB1rlBl1pqyOe4c9l5NxBV8VQ4yD3Rjf1_axWtCJU12eeUsNfvMUK3iB7VUTfYERjCtTRzXe4hRr54w
 2 > Connection: Keep-Alive
 2 > Content-Length: 58
 2 > Content-Type: application/json; charset=UTF-8
@@ -185,21 +193,22 @@
 2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:38:37.177 response time in milliseconds: 7499
+21:02:10.106 response time in milliseconds: 1331
 2 < 200
 2 < Connection: keep-alive
 2 < Content-Length: 102
 2 < Content-Type: application/json
-2 < Date: Tue, 21 Aug 2018 01:38:37 GMT
-2 < X-Amzn-Trace-Id: Root=1-5b7b6d16-588e6a7c6658a007a3ed5ed8;Sampled=0
-2 < x-amz-apigw-id: L837eGibCYcF_CQ=
-2 < x-amzn-RequestId: e85663be-a4e2-11e8-acd0-45d44e3a73c2
-{"id":"0999b0aa-9a97-40c6-80a2-461addf0bd84","name":"Captain America","secretIdentity":"Steve Rogers"}
+2 < Date: Wed, 22 Aug 2018 00:02:10 GMT
+2 < X-Amzn-Trace-Id: Root=1-5b7ca801-37e752b66f11508e2d8f0920;Sampled=0
+2 < x-amz-apigw-id: L_8wMF8BiYcFjqw=
+2 < x-amzn-RequestId: 9cff41bb-a59e-11e8-a2a0-49c0d69e34e4
+{"id":"a0817afd-5919-456b-bd3b-20b862dce170","name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:38:37.192 karate.env system property was: null 
-22:38:37.194 request:
+21:02:10.120 karate.env system property was: null 
+21:02:11.238 request:
 1 > POST https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjllMTE3NGFmLWE1OWUtMTFlOC04OTdmLWIzOWEzNjU5YTBmNiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTMxLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzMxLCJpYXQiOjE1MzQ4OTYxMzEsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.e_oa4ACmRyYfYkal1O_Lz3jyusTt9g1P7CV7URWGYV_owsepZPa5REGGq4XfUaqPJzyTnwr5Rjrzc8m3N14NmK-9E-Oc_UrNwZF82oSwU1VGodpiBfnHEDd1YsUApTjp0JhS-42s-qWx-qEIqTrqv22Mbu5lrIQZmv_1mjYJZ7QXkYdrif1NEgI1_AZdYZG2WZHLF-Rn0aCeUR6bGEUjw29POMl1Ncco1HDwwqsUUCqBe8qREHvbfPtKTksBJsNDAW4eN_0xi3XWsNlom6MdxNvnoQYd30AOtuS47qIpemY2qRZ0maV_cCt3EcoBGzNrXVmlccaKMIjaS86g5rDkJw
 1 > Connection: Keep-Alive
 1 > Content-Length: 33
 1 > Content-Type: application/json; charset=UTF-8
@@ -207,20 +216,21 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"secretIdentity":"Steve Rogers"}
 
-22:38:37.683 response time in milliseconds: 489
+21:02:11.748 response time in milliseconds: 509
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Tue, 21 Aug 2018 01:38:37 GMT
-1 < x-amz-apigw-id: L838pFKuiYcFsUw=
-1 < x-amzn-RequestId: eccf6992-a4e2-11e8-b142-e3545a588e85
+1 < Date: Wed, 22 Aug 2018 00:02:11 GMT
+1 < x-amz-apigw-id: L_8wkFOWCYcFd1g=
+1 < x-amzn-RequestId: 9e74556d-a59e-11e8-a3d9-07faa7aedea6
 {"message": "Invalid request body"}
 
-22:38:37.691 karate.env system property was: null 
-22:38:37.695 request:
+21:02:11.756 karate.env system property was: null 
+21:02:12.958 request:
 1 > PUT https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/2
 1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer eyJraWQiOiJldjVuT3JNY3pTMVJwQkQ5cm56cHE1dlwvSFFjbjdoMnpXSjhkSWt4R0Y0dz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNWYzN2EwZi1lY2QyLTRhYjYtYTlmYi1jMWNiZGQyZTY1OGEiLCJhdWQiOiI2ZXE5cXVubnJ1cmw4NnJsNWYxcmtxNmRlbiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjlmMTZhZmRkLWE1OWUtMTFlOC1iMjY3LWNmZDJmNTE0ODRiZiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNTM0ODk2MTMyLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9LMFVXVWViTk0iLCJjb2duaXRvOnVzZXJuYW1lIjoiZmVsaXBlIiwiZXhwIjoxNTM0ODk5NzMyLCJpYXQiOjE1MzQ4OTYxMzIsImVtYWlsIjoiZnNzY29zdGFAZ21haWwuY29tIn0.UJFBi88V9hMZ7jFDSGOvM1wHWdNVhYNuz8S2wTTnznrefcyZqMxX4uBT7XwOLmniCyq_XvfrH4dQIbh-xS-Uya0ZTxqrtlGakwlqDZu06EULuht6KtgOMw78_2_eTc_obw0fnOynPah10HPK51Ly700D6Jrdww5wyhOYnDFNNtOBwogE-bG_wIU60rMFC89IikdZqQAHMYL5miVDi4aHTHs_Qg1wTj3XLftPAHydwC8TkTCpsvh1AZpK7oI7A4OC2GS_SK3n3CxQKCb_N7kHCMTimRqhvpdknkj6f_rkz0Ww5jJpyw715bwszFOVufxWm4LrxUrPtEqb-3jqmcxujA
 1 > Connection: Keep-Alive
 1 > Content-Length: 33
 1 > Content-Type: application/json; charset=UTF-8
@@ -228,217 +238,22 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"secretIdentity":"Steve Rogers"}
 
-22:38:38.191 response time in milliseconds: 495
+21:02:13.532 response time in milliseconds: 573
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Tue, 21 Aug 2018 01:38:38 GMT
-1 < x-amz-apigw-id: L838uGTGCYcF4Lg=
-1 < x-amzn-RequestId: ed1c77ed-a4e2-11e8-ae65-e7dff91c7374
+1 < Date: Wed, 22 Aug 2018 00:02:13 GMT
+1 < x-amz-apigw-id: L_8w2EQ0iYcFXjQ=
+1 < x-amzn-RequestId: 9f7f0eaa-a59e-11e8-a0c0-65507cd9367c
 {"message": "Invalid request body"}
 
-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
-
-21:39:59.417 response time in milliseconds: 543
-1 < 404
-1 < Connection: keep-alive
-1 < Content-Length: 319
-1 < Content-Type: application/json
-1 < Date: Tue, 21 Aug 2018 00:39:59 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7b5f5f-b121bdac29e544be356a2b90;Sampled=0
-1 < x-amz-apigw-id: L8vW4G_GCYcFf9w=
-1 < x-amzn-RequestId: bba3096c-a4da-11e8-bd45-831404d35c32
-{"errorMessage":"[NotFound] - Avenger id: invalid not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:33)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
-
-21:39:59.420 request:
-2 > POST https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers
-2 > Accept-Encoding: gzip,deflate
-2 > Connection: Keep-Alive
-2 > Content-Length: 33
-2 > Content-Type: application/json; charset=UTF-8
-2 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
-2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
-{"secretIdentity":"Steve Rogers"}
-
-21:39:59.962 response time in milliseconds: 542
-2 < 400
-2 < Connection: keep-alive
-2 < Content-Length: 35
-2 < Content-Type: application/json
-2 < Date: Tue, 21 Aug 2018 00:39:59 GMT
-2 < x-amz-apigw-id: L8vW-HcUiYcFa_Q=
-2 < x-amzn-RequestId: bbf8a41f-a4da-11e8-86ac-67f022a82b64
+mzn-RequestId: 4b6d4c58-a59e-11e8-a6a2-7bbd6f597f8f
 {"message": "Invalid request body"}
 
-21:39:59.971 karate.env system property was: null 
-21:39:59.973 request:
-1 > GET https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/invalid
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
-1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+}
 
-21:40:00.558 response time in milliseconds: 585
-1 < 404
-1 < Connection: keep-alive
-1 < Content-Length: 319
-1 < Content-Type: application/json
-1 < Date: Tue, 21 Aug 2018 00:40:00 GMT
-1 < X-Amzn-Trace-Id: Root=1-5b7b5f60-ff2764c00f704f20ce28f240;Sampled=0
-1 < x-amz-apigw-id: L8vXDEYCiYcFnaA=
-1 < x-amzn-RequestId: bc4abb77-a4da-11e8-a426-4f0a9ceaa412
-{"errorMessage":"[NotFound] - Avenger id: invalid not found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:33)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
-
-21:40:00.563 request:
-2 > PUT https://ktjhl7rihl.execute-api.us-east-2.amazonaws.com/dev/avengers/2
-2 > Accept-Encoding: gzip,deflate
-2 > Connection: Keep-Alive
-2 > Content-Length: 33
-2 > Content-Type: application/json; charset=UTF-8
-2 > Host: ktjhl7rihl.execute-api.us-east-2.amazonaws.com
-2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
-{"secretIdentity":"Steve Rogers"}
-
-21:40:01.075 response time in milliseconds: 511
-2 < 400
-2 < Connection: keep-alive
-2 < Content-Length: 35
-2 < Content-Type: application/json
-2 < Date: Tue, 21 Aug 2018 00:40:00 GMT
-2 < x-amz-apigw-id: L8vXJE17iYcFqag=
-2 < x-amzn-RequestId: bca4e94e-a4da-11e8-a6dd-6fbdf0299266
-{"message": "Invalid request body"}
-
-aws-required="" /> 
-        <div class="aws-nav-button-group"> 
-         <button class="aws-nav-button-search icon-search" type="submit"></button> 
-        </div> 
-       </div> 
-      </form> 
-     </div> 
-     <div class="aws-nav-flyout-centered-content-wrapper"> 
-      <div class="aws-nav-flyout-centered-content-container"> 
-      </div> 
-     </div> 
-    </div> 
-   </div> 
-  </div> 
-  <div class="aws-nav-flyout level-1"> 
-   <div id="aws-nav-flyout-2-cloud" class="aws-nav-flyout-content" data-da="ignore-standard-impression"> 
-    <div class="aws-nav-flyout-inner"> 
-     <h6> AWS &amp; Cloud Computing</h6> 
-     <div class="aws-link aws-nav-flyout-section-header">
-       INTRODUCTION TO AWS 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/what-is-cloud-computing/?nc2=h_l2_cc">What is Cloud Computing?</a> 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/choosing-a-cloud-platform/?nc2=h_l2_cc">Choosing a Cloud Platform</a> 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/about-aws/events/?nc2=h_l2_cc">Events &amp; Webinars</a> 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/solutions/case-studies/?nc2=h_l2_cc">Customer Success</a> 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/about-aws/global-infrastructure/?nc2=h_l2_cc">Global Infrastructure</a> 
-     </div> 
-     <div class="aws-link aws-nav-flyout-section-header">
-       GETTING STARTED 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/getting-started/?nc2=h_l2_cc">Getting Started</a> 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/free/?nc2=h_l2_cc">AWS Free Tier</a> 
-     </div> 
-     <div class="aws-link aws-nav-flyout-section-header">
-       NEWS 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/new/?nc2=h_l2_cc">What's New</a> 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/blogs/">AWS Blog</a> 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/about-aws/in-the-news/?nc2=h_l2_cc">AWS in the News</a> 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/resources/analyst-reports/?nc2=h_l2_cc">Analyst Reports</a> 
-     </div> 
-    </div> 
-   </div> 
-   <div id="aws-nav-flyout-2-solutions" class="aws-nav-flyout-content" data-da="ignore-standard-impression"> 
-    <div class="aws-nav-flyout-inner"> 
-     <h6> <a href="https://aws.amazon.com/solutions/?nc2=h_l2_s">Solutions<i class="icon-angle-double-right"></i></a> </h6> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-websites">Websites &amp; Web Apps<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-mobile2">Mobile Services<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-backup">Backup, Storage, &amp; Archive<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-big">Big Data &amp; HPC<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-power">Power &amp; Utilities<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-gas">Oil &amp; Gas<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-finservices">Financial Services<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-gaming">Game Development<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-digital">Digital Media<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-healthcare">Healthcare &amp; Life Sciences<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-business">Business Apps<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-retail">Retail<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-auto">Automotive<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-block">Blockchain<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-tele">Telecommunications<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-link"> 
-      <a class="aws-has-icon" href="javascript:void(0)" data-flyout="aws-nav-flyout-3-manufact">Manufacturing<i class="icon-angle-right"></i></a> 
-     </div> 
-     <div class="aws-divider"></div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/startups/?nc2=h_l2_so">Start-ups<span>Start-ups use AWS for everything their app needs. </span> </a> 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/enterprise/?nc2=h_l2_so">Enterprises<span>Enterprises use AWS to deliver IT innovation globally while reducing costs. </span> </a> 
-     </div> 
-     <div class="aws-link"> 
-      <a href="https://aws.amazon.com/government-education/?nc2=h_l2_so">Government &amp; Education<span>Public Sector organizations use AWS to improve agility while reducing costs.</span> </a> 
-     </div> 
-    </div> 
-   </div> 
-   <div id="aws-nav-flyout-2-products" class="aws-nav-flyout-content" data-da="ignore-standard-impression"> 
+v id="aws-nav-flyout-2-products" class="aws-nav-flyout-content" data-da="ignore-standard-impression"> 
     <div class="aws-nav-flyout-inner"> 
      <h6> <a href="https://aws.amazon.com/products/?nc2=h_l2_p">Products<i class="icon-angle-double-right"></i></a> </h6> 
      <div class="aws-link"> 
